@@ -1,13 +1,14 @@
 name: "Test Integration"
 
-on:
-  push:
-    paths-ignore:
-      - "**.md"
-  pull_request:
-    paths-ignore:
-      - "**.md"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     paths-ignore:
+#       - "**.md"
+#   pull_request:
+#     paths-ignore:
+#       - "**.md"
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
   cancel-in-progress: true

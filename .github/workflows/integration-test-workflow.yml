@@ -1,20 +1,21 @@
 name: "Integration test workflow"
 
-on:
-  workflow_call:
-    inputs:
-      main-branch-name:
-        required: false
-        type: string
-        default: main
-      runs-on:
-        required: false
-        type: string
-        default: ubuntu-latest
-      working-directory:
-        required: false
-        type: string
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#     inputs:
+#       main-branch-name:
+#         required: false
+#         type: string
+#         default: main
+#       runs-on:
+#         required: false
+#         type: string
+#         default: ubuntu-latest
+#       working-directory:
+#         required: false
+#         type: string
+# 
 jobs:
   main:
     runs-on: ${{ inputs.runs-on }}
